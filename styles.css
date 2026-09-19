@@ -503,7 +503,9 @@ a:hover { text-decoration: underline; }
   padding-bottom: 9px;
   border-bottom: 1px solid var(--line);
 }
-.side-h + .side-h, .side-links + .side-h { margin-top: 28px; }
+.side-h + .side-h,
+.side-links + .side-h,
+.side-langs + .side-h { margin-top: 28px; }
 
 .side-p {
   font-family: var(--sans);
@@ -535,6 +537,25 @@ a:hover { text-decoration: underline; }
   padding: 6px 0;
 }
 .side-langs li span { margin-left: auto; color: var(--dim); }
+
+/* AI: declared capabilities, so they read as repo topics rather than
+   measured language counts. Different shape, different kind of claim. */
+.side-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.side-tags li {
+  font-size: 11.5px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--link);
+  background: color-mix(in srgb, var(--link) 12%, transparent);
+}
 
 /* ── footer ───────────────────────────────────────────── */
 
