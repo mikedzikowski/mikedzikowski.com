@@ -491,6 +491,39 @@ a:hover { text-decoration: underline; }
 .checks li span:first-of-type { flex: 1; min-width: 0; }
 .checks li .dim { font-size: 12px; white-space: nowrap; }
 
+/* ── contact : GitHub's issue list ────────────────────── */
+
+.issue-lede {
+  margin: 0;
+  padding: 18px 18px 16px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dim);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.issues { list-style: none; margin: 0; padding: 0; }
+
+.issues li { border-bottom: 1px solid var(--line-soft); }
+.issues li:last-child { border-bottom: 0; }
+
+.issues a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 18px;
+  color: var(--ink);
+  font-size: 13px;
+}
+.issues a:hover { background: var(--surface); text-decoration: none; }
+.issues a:hover .ititle { color: var(--link); text-decoration: underline; }
+
+.issues .open { color: var(--pass); }
+
+.ititle { font-weight: 500; color: var(--ink-hi); min-width: 92px; }
+.imeta { color: var(--dim); font-size: 12.5px; overflow-wrap: anywhere; }
+
 /* ── about rail ───────────────────────────────────────── */
 
 .col-side { position: sticky; top: 22px; }
@@ -590,6 +623,9 @@ a:hover { text-decoration: underline; }
   .lnk { margin-left: 0; }
   .code { padding: 18px; font-size: 12px; }
   .checks li { flex-wrap: wrap; gap: 8px; }
+  .issues a { flex-wrap: wrap; gap: 8px 11px; }
+  .ititle { min-width: 0; }
+  .imeta { flex-basis: 100%; padding-left: 27px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
